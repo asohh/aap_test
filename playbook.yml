@@ -1,4 +1,7 @@
 - hosts: all
   tasks:
+    - name: Display resolv.conf contents
+      command: cat /etc/ansible/ansible.cfg
+      register: command_output
     - debug:
-        msg: test
+        var: command_output.stdout
