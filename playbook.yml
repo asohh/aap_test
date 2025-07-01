@@ -6,3 +6,4 @@
       delegate_to: localhost
     - debug:
         var: command_output.stdout
+    - command: cat /etc/hosts
