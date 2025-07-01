@@ -3,5 +3,6 @@
     - name: Display resolv.conf contents
       command: cat /etc/ansible/ansible.cfg
       register: command_output
+      delegate_to: localhost
     - debug:
         var: command_output.stdout
